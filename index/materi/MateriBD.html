@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Bangun Datar</title>
+    <link rel="stylesheet" href="../../css/styleBD.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="../../css/bd.png" type="image/png" rel="icon" class="ico">
+</head>
+<body>
+  <div class="header" >
+      <div class="menu">
+        <a class="listmenu" href="../index1.html">Home</a>
+        <a class="listmenu" href="../materi.html">List Materi</a>
+        <a class="listmenu" href="../Kalkulator.html">Kalkulator</a>
+      </div>
+  </div>
+  <div class="isi">
+    <div class="persegi">
+      <h2>1. PERSEGI</h2><br>
+      <div class="persegi1" style="top: 120px;width: 20%;">
+        <div class="img-persegi">
+          <img src="../../css/01Persegi.png" alt="">
+        </div>
+
+        <div class="ket-persegi" style="margin-left:20px;">
+          <p style="font-weight:bold">Keterangan :</p>
+          <p>s = sisi</p>
+        </div>
+      </div>
+
+      <div class="persegi2" style="top: 120px;width: 35%;left: 340px;">
+        <p style="font-weight: bold">Rumus :</p><br>
+        <p>a. Menghitung Luas (L)</p>
+        <p class="rumus">L = s x s</p>
+
+        <p>b.Menghitung Keliling (K)</p>
+        <p class="rumus">K = s x 4</p>
+
+        <p>c. Menghitung sisi  (s)</p>
+            <p style= "padding-left: 30px;font-weight: bold;">s = &radic;<span style="text-decoration:overline;">&nbsp;L&nbsp;</span></p>
+        <p class="rumus" style = "font-weight: normal;">atau</p>
+        <p class="rumus">s = K ÷ 4</p>
+
+        <p>d. Menghitung diagonal (d)</p>
+        <table style="border-spacing:0px; border-width:0px; padding-left: 30px; font-weight: bold;">
+          <tr>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              _______
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0px; font-size:larger">
+              d = &radic;
+            </td>
+            <td style="padding:0px;">
+              &nbsp;s<sup>2</sup> + s<sup>2</sup>&nbsp;
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="persegi3" style="top: 120px;">
+        <p style="font-weight: bold;">Perhitungan</p><br>
+        <p>Masukkan data untuk menghitung luas dan keliling :</p><br>
+        <span>Sisi    </span><input id="ipersegi1" style="height:30px;width:250px;margin:5px 0 10px 70px;text-align:center;font-size:16px;">
+        <br>
+        <!-- <span>Satuan  </span><input id="input2" style="height:30px;width:250px;margin:5px 0 10px 45px;text-align:center;font-size:16px;"> -->
+
+        <div class="hasilperhitungan" style="margin-top:25px;">
+          <span>Luas </span><input id="opersegi1" readonly style="height:30px;width:250px;margin:5px 0 10px 60px;text-align:center;font-size:16px;">
+          <br>
+          <span>keliling </span><input id="opersegi2" readonly style="height:30px;width:250px;margin:5px 0 10px 40px;text-align:center;font-size:16px;">
+        </div>
+        <br>
+        <div class="tombol">
+          <button type="button" name="button" onclick="hitungpersegi()">Hitung</button>
+          <button type="button" name="button"onclick="hapus1()">Delete</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="persegipanjang">
+      <h2 style="top: 700px;position:absolute;">2. PERSEGI PANJANG</h2><br>
+      <div class="persegi1" style="top: 750px;width: 35%;">
+        <div class="img-persegi">
+          <img src="../../css/02Persegipanjang.png" alt="">
+        </div>
+
+        <div class="ket-persegi" style="margin-left:20px;">
+          <p style="font-weight:bold">Keterangan :</p>
+          <p>p = panjang</p>
+          <p>l = lebar</p>
+        </div>
+      </div>
+
+      <div class="persegi2" style="top: 750px;width: 20%;left: 540px;">
+        <p style="font-weight: bold">Rumus :</p><br>
+        <p>a. Menghitung Luas (L)</p>
+        <p class="rumus">L = p x l</p>
+
+        <p>b.Menghitung Keliling (K)</p>
+        <p class="rumus">K = 2 x (p + l)</p>
+
+        <p>c. Menghitung panjang  (p)</p>
+        <p class="rumus">p = L ÷ l</p>
+        <p class="rumus" style = "font-weight: normal;">atau</p>
+        <p class="rumus">p = (K ÷ 2) - l</p>
+
+        <p>d. Menghitung lebar  (l)</p>
+        <p class="rumus">l = L ÷ p</p>
+        <p class="rumus" style = "font-weight: normal;">atau</p>
+        <p class="rumus">l = (K ÷ 2) - p</p>
+
+        <p>e. Menghitung diagonal (d)</p>
+          <table style="border-spacing:0px; border-width:0px; padding-left: 30px; font-weight: bold;">
+            <tr>
+              <td>
+                &nbsp;
+              </td>
+              <td>
+                _______
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0px; font-size:larger">
+                d = &radic;
+              </td>
+              <td style="padding:0px;">
+                &nbsp;p<sup>2</sup> + l<sup>2</sup>&nbsp;
+              </td>
+            </tr>
+          </table>
+      </div>
+
+      <div class="persegi3" style="top: 750px;">
+        <p style="font-weight: bold;">Perhitungan</p><br>
+        <p>Masukkan data untuk menghitung luas dan keliling :</p><br>
+        <span>panjang    </span><input id="ipersegipanjang1" style="height:30px;width:250px;margin:5px 0 10px 30px;text-align:center;font-size:16px;">
+        <br>
+        <span>lebar  </span><input id="ipersegipanjang2" style="height:30px;width:250px;margin:5px 0 10px 55px;text-align:center;font-size:16px;">
+
+        <div class="hasilperhitungan" style="margin-top:25px;">
+          <span>Luas </span><input id="opersegipanjang1" readonly style="height:30px;width:250px;margin:5px 0 10px 55px;text-align:center;font-size:16px;">
+          <br>
+          <span>keliling </span><input id="opersegipanjang2" readonly style="height:30px;width:250px;margin:5px 0 10px 35px;text-align:center;font-size:16px;">
+        </div>
+        <br>
+        <div class="tombol">
+          <button type="button" name="button" onclick="hitungpersegipanjang()">Hitung</button>
+          <button type="button" name="button" onclick="hapus2()">Delete</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="segitiga">
+      <h2 style="top: 1400px;position:absolute;">3. SEGITIGA</h2><br>
+      <div class="persegi1" style="top: 1450px;width: 35%;">
+        <div class="img-persegi">
+          <img src="../../css/03Segitiga.png" alt="">
+        </div>
+
+        <div class="ket-persegi" style="margin-left:20px;">
+          <p style="font-weight:bold">Keterangan :</p>
+          <p>a = alas</p>
+          <p>t = tinggi</p>
+          <p>b,c = sisi lain segitiga</p>
+        </div>
+      </div>
+
+      <div class="persegi2" style="top: 1450px;width: 20%;left: 540px;">
+        <p style="font-weight: bold">Rumus :</p><br>
+        <p>a. Menghitung Luas (L)</p>
+        <p class="rumus">L = ½ × a × t</p>
+
+        <p>b.Menghitung Keliling (K)</p>
+        <p class="rumus">K = a + b + c</p>
+
+        <p>c. Menghitung tinggi  (t)</p>
+        <p class="rumus">t = (2 × Luas) ÷ a</p>
+
+        <p>d. Menghitung alas (a)</p>
+          <p class="rumus">a = (2 × Luas) ÷ t</p>
+
+      </div>
+
+      <div class="persegi3" style="top: 1450px; height: 600px;">
+        <p style="font-weight: bold;">Perhitungan</p><br>
+        <p>Masukkan data untuk menghitung luas dan keliling :</p><br>
+        <span>alas</span><input id="isegitiga1" style="height:30px;width:250px;margin:5px 0 10px 70px;text-align:center;font-size:16px;">
+        <br>
+        <span>sisi 1</span><input id="isegitiga2" style="height:30px;width:250px;margin:5px 0 10px 65px;text-align:center;font-size:16px;">
+        <br>
+        <span>sisi 2</span><input id="isegitiga3" style="height:30px;width:250px;margin:5px 0 10px 60px;text-align:center;font-size:16px;">
+        <br>
+        <span>tinggi</span><input id="isegitiga4" style="height:30px;width:250px;margin:5px 0 10px 50px;text-align:center;font-size:16px;">
+
+        <div class="hasilperhitungan" style="margin-top:25px;">
+          <span>Luas </span><input id="osegitiga1" readonly style="height:30px;width:250px;margin:5px 0 10px 55px;text-align:center;font-size:16px;">
+          <br>
+          <span>keliling </span><input id="osegitiga2" readonly style="height:30px;width:250px;margin:5px 0 10px 35px;text-align:center;font-size:16px;">
+        </div>
+        <br>
+        <div class="tombol">
+          <button type="button" name="button" onclick="hitungsegitiga()">Hitung</button>
+          <button type="button" name="button" onclick="hapus3()">Delete</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="Jajargenjang">
+      <h2 style="top: 2150px;position:absolute;">4. JAJAR GENJANG</h2><br>
+      <div class="persegi1" style="top: 2200px;width: 35%;">
+        <div class="img-persegi">
+          <img src="../../css/04JajarGenjang.png" alt="">
+        </div>
+
+        <div class="ket-persegi" style="margin-left:20px;">
+          <p style="font-weight:bold">Keterangan :</p>
+          <p>a = sisi alas</p>
+          <p>b = sisi miring</p>
+          <p>t = tinggi</p>
+
+        </div>
+      </div>
+
+      <div class="persegi2" style="top: 2200px;width: 20%;left: 540px;">
+        <p style="font-weight: bold">Rumus :</p><br>
+        <p>a. Menghitung Luas (L)</p>
+        <p class="rumus">L = a × t</p>
+
+        <p>b.Menghitung Keliling (K)</p>
+        <p class="rumus">K = 2 × (a + b)</p>
+
+        <p>c.Menghitung sisi alas (a)</p>
+        <p class="rumus">a = (Kll ÷ 2) - b</p>
+        <p class="rumus" style = "font-weight: normal;">atau</p>
+        <p class="rumus">a = L ÷ t</p>
+
+        <p>d.Menghitung sisi miring (b)</p>
+        <p class="rumus">b = (Kll ÷ 2) - a</p>
+
+        <p>e. Menghitung tinggi  (t)</p>
+        <p class="rumus">t = L ÷ a</p>
+
+
+      </div>
+
+      <div class="persegi3" style="top: 2200px; height: 550px;">
+        <p style="font-weight: bold;">Perhitungan</p><br>
+        <p>Masukkan data untuk menghitung luas dan keliling :</p><br>
+        <span>sisi alas</span><input id="ijajargenjang1" style="height:30px;width:250px;margin:5px 0 10px 50px;text-align:center;font-size:16px;">
+        <br>
+        <span>sisi miring</span><input id="ijajargenjang2" style="height:30px;width:250px;margin:5px 0 10px 25px;text-align:center;font-size:16px;">
+        <br>
+        <span>tinggi</span><input id="ijajargenjang3" style="height:30px;width:250px;margin:5px 0 10px 60px;text-align:center;font-size:16px;">
+
+        <div class="hasilperhitungan" style="margin-top:25px;">
+          <span>Luas </span><input id="ojajargenjang1" readonly style="height:30px;width:250px;margin:5px 0 10px 65px;text-align:center;font-size:16px;">
+          <br>
+          <span>keliling </span><input id="ojajargenjang2" readonly style="height:30px;width:250px;margin:5px 0 10px 45px;text-align:center;font-size:16px;">
+        </div>
+        <br>
+        <div class="tombol">
+          <button type="button" name="button" onclick="hitungjajargenjang()">Hitung</button>
+          <button type="button" name="button" onclick="hapus4()">Delete</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="Belahketupat">
+      <h2 style="top: 2850px;position:absolute;">5. BELAH KETUPAT</h2><br>
+      <div class="persegi1" style="top: 2900px;width: 35%;">
+        <div class="img-persegi">
+          <img src="../../css/05Belahketupat.png" alt="">
+        </div>
+
+        <div class="ket-persegi" style="margin-left:20px;">
+          <p style="font-weight:bold">Keterangan :</p>
+          <p>s = sisi</p>
+          <p>d1 = diagonal 1</p>
+          <p>d2 = diagonal 2</p>
+
+        </div>
+      </div>
+
+      <div class="persegi2" style="top: 2900px;width: 20%;left: 540px;">
+        <p style="font-weight: bold">Rumus :</p><br>
+        <p>a. Menghitung Luas (L)</p>
+        <p class="rumus">L = ½ × d1 × d2</p>
+
+        <p>b.Menghitung Keliling (K)</p>
+        <p class="rumus">K = s × 4</p>
+
+        <p>c.Menghitung sisi (s)</p>
+        <p class="rumus">s = Kll ÷ 4</p>
+
+        <p>d.Menghitung daigonal (d)</p>
+        <p class="rumus">d1 = 2 × L ÷ d2</p>
+        <p class="rumus" style = "font-weight: normal;">atau</p>
+        <p class="rumus">d2 = 2 × L ÷ d1</p>
+
+
+      </div>
+
+      <div class="persegi3" style="top: 2900px; height: 550px;">
+        <p style="font-weight: bold;">Perhitungan</p><br>
+        <p>Masukkan data untuk menghitung luas dan keliling :</p><br>
+        <span>sisi</span><input id="ibelahketupat1" style="height:30px;width:250px;margin:5px 0 10px 85px;text-align:center;font-size:16px;">
+        <br>
+        <span>diagonal 1</span><input id="ibelahketupat2" style="height:30px;width:250px;margin:5px 0 10px 30px;text-align:center;font-size:16px;">
+        <br>
+        <span>diagonal 2</span><input id="ibelahketupat3" style="height:30px;width:250px;margin:5px 0 10px 25px;text-align:center;font-size:16px;">
+
+        <div class="hasilperhitungan" style="margin-top:25px;">
+          <span>Luas </span><input id="obelahketupat1" readonly style="height:30px;width:250px;margin:5px 0 10px 65px;text-align:center;font-size:16px;">
+          <br>
+          <span>keliling </span><input id="obelahketupat2" readonly style="height:30px;width:250px;margin:5px 0 10px 45px;text-align:center;font-size:16px;">
+        </div>
+        <br>
+        <div class="tombol">
+          <button type="button" name="button" onclick="hitungbelahketupat()">Hitung</button>
+          <button type="button" name="button" onclick="hapus5()">Delete </button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="Layanglayang">
+      <h2 style="top: 3550px;position:absolute;">6. LAYANG-LAYANG</h2><br>
+      <div class="persegi1" style="top: 3600px;width: 35%;">
+        <div class="img-persegi">
+          <img src="../../css/06Layanglayang.png" alt="">
+        </div>
+
+        <div class="ket-persegi" style="margin-left:20px;">
+          <p style="font-weight:bold">Keterangan :</p>
+          <p>s (a/b) = sisi atas</p>
+          <p>s (c/d) = sisi bawah</p>
+          <p>d1 = diagonal 1</p>
+          <p>d2 = diagonal 2</p>
+
+        </div>
+      </div>
+
+      <div class="persegi2" style="top: 3600px;width: 20%;left: 540px;">
+        <p style="font-weight: bold">Rumus :</p><br>
+        <p>a. Menghitung Luas (L)</p>
+        <p class="rumus">L = ½ × d1 × d2</p>
+
+        <p>b.Menghitung Keliling (K)</p>
+        <p class="rumus">K = s × 4</p>
+
+        <p>c.Menghitung sisi (s)</p>
+        <p class="rumus">s = Kll ÷ 4</p>
+
+        <p>d.Menghitung daigonal (d)</p>
+        <p class="rumus">d1 = 2 × L ÷ d2</p>
+        <p class="rumus" style = "font-weight: normal;">atau</p>
+        <p class="rumus">d2 = 2 × L ÷ d1</p>
+
+
+      </div>
+
+      <div class="persegi3" style="top: 3600px; height: 600px;">
+        <p style="font-weight: bold;">Perhitungan</p><br>
+        <p>Masukkan data untuk menghitung luas dan keliling :</p><br>
+        <span>sisi atas (a/b)</span><input id="ilayanglayang1" style="height:30px;width:200px;margin:5px 0 10px 55px;text-align:center;font-size:16px;">
+        <br>
+        <span>sisi bawah (c/d)</span><input id="ilayanglayang2" style="height:30px;width:200px;margin:5px 0 10px 35px;text-align:center;font-size:16px;">
+        <br>
+        <span>diagonal 1</span><input id="ilayanglayang3" style="height:30px;width:250px;margin:5px 0 10px 30px;text-align:center;font-size:16px;">
+        <br>
+        <span>diagonal 2</span><input id="ilayanglayang4" style="height:30px;width:250px;margin:5px 0 10px 25px;text-align:center;font-size:16px;">
+
+        <div class="hasilperhitungan" style="margin-top:25px;">
+          <span>Luas </span><input id="olayanglayang1" readonly style="height:30px;width:250px;margin:5px 0 10px 65px;text-align:center;font-size:16px;">
+          <br>
+          <span>keliling </span><input id="olayanglayang2" readonly style="height:30px;width:250px;margin:5px 0 10px 45px;text-align:center;font-size:16px;">
+        </div>
+        <br>
+        <div class="tombol">
+          <button type="button" name="button" onclick="hitunglayanglayang()">Hitung</button>
+          <button type="button" name="button" onclick="hapus6()">Delete</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="Trapesium">
+      <h2 style="top: 4250px;position:absolute;">7. TRAPESIUM</h2><br>
+      <div class="persegi1" style="top: 4300px;width: 35%;">
+        <div class="img-persegi">
+          <img src="../../css/07Trapesium.png" alt="">
+        </div>
+
+        <div class="ket-persegi" style="margin-left:20px;">
+          <p style="font-weight:bold">Keterangan :</p>
+          <p>t = tinggi</p>
+          <p>a, b = sisi sejajar</p>
+          <p>AB(a), BC, CD(b), DA = sisi trapesium</p>
+
+        </div>
+      </div>
+
+      <div class="persegi2" style="top: 4300px;width: 20%;left: 540px;">
+        <p style="font-weight: bold">Rumus :</p><br>
+        <p>a. Menghitung Luas (L)</p>
+        <p class="rumus">L = ½ × (a + b) x t</p>
+
+        <p>b.Menghitung Keliling (K)</p>
+        <p class="rumus">K = AB + BC + CD + DA</p>
+
+        <p>c.Menghitung tinggi (t)</p>
+        <a style="font-weight: bold;padding-left: 30px;">t = </a>
+        <span style="display: inline-block;vertical-align: middle;font-weight: bold;">
+            <div style="text-align: center;border-bottom: 1px solid black;">2 x L</div>
+            <div style="text-align: center;">(a + b)</div>
+        </span>
+
+        <p>d.Menghitung sisi sejajar</p>
+        <a style="font-weight: bold;padding-left: 30px;">a = </a>
+        <span style="display: inline-block;vertical-align: middle;font-weight: bold;">
+            <div style="text-align: center;border-bottom: 1px solid black;">2 x L</div>
+            <div style="text-align: center;">t</div>
+        </span>
+        <a style="font-weight: bold;">- b </a>
+
+        <p class="rumus" style = "font-weight: normal;">atau</p>
+
+        <a style="font-weight: bold;padding-left: 30px;">b = </a>
+        <span style="display: inline-block;vertical-align: middle;font-weight: bold;">
+            <div style="text-align: center;border-bottom: 1px solid black;">2 x L</div>
+            <div style="text-align: center;">t</div>
+        </span>
+        <a style="font-weight: bold;">- a </a>
+
+
+      </div>
+
+      <div class="persegi3" style="top: 4300px; height: 650px;">
+        <p style="font-weight: bold;">Perhitungan</p><br>
+        <p>Masukkan data untuk menghitung luas dan keliling :</p><br>
+        <span>tinggi</span><input id="itrapesium1" style="height:30px;width:200px;margin:5px 0 10px 90px;text-align:center;font-size:16px;">
+        <br>
+        <span>sisi sejajar (a)</span><input id="itrapesium2" style="height:30px;width:200px;margin:5px 0 10px 35px;text-align:center;font-size:16px;">
+        <br>
+        <span>sisi sejajar (b)</span><input id="itrapesium3" style="height:30px;width:200px;margin:5px 0 10px 35px;text-align:center;font-size:16px;">
+        <br>
+        <span>sisi miring (AD)</span><input id="itrapesium4" style="height:30px;width:200px;margin:5px 0 10px 20px;text-align:center;font-size:16px;">
+        <br>
+        <span>sisi sejajar (BC)</span><input id="itrapesium5" style="height:30px;width:200px;margin:5px 0 10px 25px;text-align:center;font-size:16px;">
+
+        <div class="hasilperhitungan" style="margin-top:25px;">
+          <span>Luas </span><input id="otrapesium1" readonly style="height:30px;width:250px;margin:5px 0 10px 65px;text-align:center;font-size:16px;">
+          <br>
+          <span>keliling </span><input id="otrapesium2" readonly style="height:30px;width:250px;margin:5px 0 10px 45px;text-align:center;font-size:16px;">
+        </div>
+        <br>
+        <div class="tombol">
+          <button type="button" name="button" onclick="hitungtrapesium()">Hitung</button>
+          <button type="button" name="button" onclick="hapus7()">Delete</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="Lingkaran">
+      <h2 style="top: 5000px;position:absolute;">8. LINGKARAN</h2><br>
+      <div class="persegi1" style="top: 5050px;width: 35%;">
+        <div class="img-persegi">
+          <img src="../../css/08Lingkaran.png" alt="">
+        </div>
+
+        <div class="ket-persegi" style="margin-left:20px;">
+          <p style="font-weight:bold">Keterangan :</p>
+          <p>r = jari-jari</p>
+          <p>d = diameter</p>
+        </div>
+
+      </div>
+
+      <div class="persegi2" style="top: 5050px;width: 20%;left: 540px;">
+        <p style="font-weight: bold">Rumus :</p><br>
+        <p>a. Menghitung Luas (L)</p>
+        <p class="rumus">L = &pi; × r<sup>2</sup></p>
+
+        <p>b.Menghitung Keliling (K)</p>
+        <p class="rumus">K = &pi; × d</p>
+
+        <p>c.Menghitung jari-jari (r)</p>
+        <a style="font-weight: bold;padding-left: 30px;">r = </a>
+        <span style="display: inline-block;vertical-align: middle;font-weight: bold;">
+            <div style="text-align: center;border-bottom: 1px solid black;">K</div>
+            <div style="text-align: center;">2 x &pi;</div>
+        </span>
+        <p class="rumus" style = "font-weight: normal;">atau</p>
+
+        <a style="font-weight: bold;padding-left: 30px;">r = </a>
+        <td style="padding:0px; font-size:larger">&radic;
+          <span style="display: inline-block;vertical-align: middle;font-weight: bold;">
+              <div style="text-align: center;border-bottom: 1px solid black;">L</div>
+              <div style="text-align: center;"> &pi;</div>
+          </span>
+        </td>
+
+
+      </div>
+
+      <div class="persegi3" style="top: 5050px; height: 450px;">
+        <p style="font-weight: bold;">Perhitungan</p><br>
+        <p>Masukkan data untuk menghitung luas dan keliling :</p><br>
+        <span>jari-jari (r)</span><input id="ilingkaran1" style="height:30px;width:250px;margin:5px 0 10px 35px;text-align:center;font-size:16px;">
+
+        <div class="hasilperhitungan" style="margin-top:25px;">
+          <span>Luas </span><input id="olingkaran1" readonly style="height:30px;width:250px;margin:5px 0 10px 65px;text-align:center;font-size:16px;">
+          <br>
+          <span>keliling </span><input id="olingkaran2" readonly style="height:30px;width:250px;margin:5px 0 10px 45px;text-align:center;font-size:16px;">
+        </div>
+        <br>
+        <div class="tombol">
+          <button type="button" name="button" onclick="hitunglingkaran()">Hitung</button>
+          <button type="button" name="button"onclick="hapus8()">Delete</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script>
+      function hitungpersegi (){
+        var sisi = document.getElementById("ipersegi1").value;
+        if (sisi==0) {
+          alert("Data kosong");
+          exit;
+        }else{
+          document.getElementById("opersegi1").value = sisi*sisi;
+          document.getElementById("opersegi2").value = sisi*4;
+        }
+
+      }
+      function hapus1(){
+        document.getElementById("ipersegi1").value = "";
+        document.getElementById("opersegi1").value = "";
+        document.getElementById("opersegi2").value = "";
+      }
+
+      function hitungpersegipanjang(){
+        var p = document.getElementById("ipersegipanjang1").value;
+        var l = document.getElementById("ipersegipanjang2").value;
+        if (p==0 || l==0) {
+          alert("Data tidak lengkap");
+          exit;
+        }else{
+          document.getElementById("opersegipanjang1").value = p*l;
+          document.getElementById("opersegipanjang2").value = 2*((p*1) + (l*1));
+        }
+
+      }
+      function hapus2(){
+        document.getElementById("ipersegipanjang1").value = "";
+        document.getElementById("ipersegipanjang2").value = "";
+        document.getElementById("opersegipanjang1").value = "";
+        document.getElementById("opersegipanjang2").value = "";
+      }
+
+      function hitungsegitiga(){
+        var a = document.getElementById("isegitiga1").value;
+        var b = document.getElementById("isegitiga2").value;
+        var c = document.getElementById("isegitiga3").value;
+        var t = document.getElementById("isegitiga4").value;
+
+        if (a==0 || t==0) {
+          alert("Untuk menghitung luas diperlukan data alas(a) dan tinggi (t)");
+          exit;
+        }else{
+          document.getElementById("osegitiga1").value = (1/2)*a*t;
+        }
+        if (b==0 || c==0) {
+          alert("Untuk menghitung keliling diperlukan data ketiga sisi");
+          exit;
+        }else{
+          document.getElementById("osegitiga2").value = (a*1)+(b*1)+(c*1);
+        }
+
+      }
+      function hapus3(){
+        document.getElementById("isegitiga1").value = "";
+        document.getElementById("isegitiga2").value = "";
+        document.getElementById("isegitiga3").value = "";
+        document.getElementById("isegitiga4").value = "";
+        document.getElementById("osegitiga1").value = "";
+        document.getElementById("osegitiga2").value = "";
+      }
+
+      function hitungjajargenjang() {
+        var a = document.getElementById("ijajargenjang1").value;
+        var b = document.getElementById("ijajargenjang2").value;
+        var t = document.getElementById("ijajargenjang3").value;
+
+        if (a==0 || t==0) {
+          alert("Untuk menghitung luas diperlukan data alas(a) dan tinggi (t)");
+          exit;
+        }else{
+          document.getElementById("ojajargenjang1").value = a*t;
+        }
+        if (b==0 || a==0) {
+          alert("Untuk menghitung keliling diperlukan dala alas(a) dan sisi miring(b)");
+          exit;
+        }else{
+          document.getElementById("ojajargenjang2").value = ((a*1)+(b*1))*2;
+        }
+      }
+      function hapus4(){
+        document.getElementById("ijajargenjang1").value = "";
+        document.getElementById("ijajargenjang2").value = "";
+        document.getElementById("ijajargenjang3").value = "";
+        document.getElementById("ojajargenjang1").value = "";
+        document.getElementById("ojajargenjang2").value = "";
+      }
+
+      function hitungbelahketupat() {
+        var s = document.getElementById("ibelahketupat1").value;
+        var d1 = document.getElementById("ibelahketupat2").value;
+        var d2 = document.getElementById("ibelahketupat3").value;
+
+        if (d1==0 || d2==0) {
+          alert("Untuk menghitung luas diperlukan data diagonal(d1 dan d2)");
+          exit;
+        }else{
+          document.getElementById("obelahketupat1").value = (1/2)*d1*d2;
+        }
+        if (s==0) {
+          alert("Untuk menghitung keliling diperlukan dala sisi(s)");
+          exit;
+        }else{
+          document.getElementById("obelahketupat2").value = s*4;
+        }
+      }
+      function hapus5(){
+        document.getElementById("ibelahketupat1").value = "";
+        document.getElementById("ibelahketupat2").value = "";
+        document.getElementById("ibelahketupat3").value = "";
+        document.getElementById("obelahketupat1").value = "";
+        document.getElementById("obelahketupat2").value = "";
+      }
+
+      function hitunglayanglayang() {
+        var sa = document.getElementById("ilayanglayang1").value;
+        var sb = document.getElementById("ilayanglayang2").value;
+        var d1 = document.getElementById("ilayanglayang3").value;
+        var d2 = document.getElementById("ilayanglayang4").value;
+
+        if (d1==0 || d2==0) {
+          alert("Untuk menghitung luas diperlukan data diagonal(d1 dan d2)");
+          exit;
+        }else{
+          document.getElementById("olayanglayang1").value = (1/2)*d1*d2;
+        }
+        if (sa==0 || sb==0) {
+          alert("Untuk menghitung keliling diperlukan data sisi(s)");
+          exit;
+        }else{
+          document.getElementById("olayanglayang2").value = (sa*2)+(sb*2);
+        }
+      }
+      function hapus6(){
+        document.getElementById("ilayanglayang1").value = "";
+        document.getElementById("ilayanglayang2").value = "";
+        document.getElementById("ilayanglayang3").value = "";
+        document.getElementById("ilayanglayang4").value = "";
+        document.getElementById("olayanglayang1").value = "";
+        document.getElementById("olayanglayang2").value = "";
+      }
+
+      function hitungtrapesium() {
+        var t = document.getElementById("itrapesium1").value;
+        var a = document.getElementById("itrapesium2").value;
+        var b = document.getElementById("itrapesium3").value;
+        var ad = document.getElementById("itrapesium4").value;
+        var bc = document.getElementById("itrapesium5").value;
+
+        if (a==0 || b==0 || t==0) {
+          alert("Untuk menghitung luas diperlukan data sisi sejajar(a dan b) dan tinggi");
+          exit;
+        }else{
+          document.getElementById("otrapesium1").value = (1/2)*((a*1)+(b*1))*t;
+        }
+        if (a==0 || b==0 || ad==0 || bc==0 ) {
+          alert("Untuk menghitung keliling diperlukan data sisi(s)");
+          exit;
+        }else{
+          document.getElementById("otrapesium2").value = (a*1)+(b*1)+(ad*1)+(bc*1);
+        }
+      }
+      function hapus7(){
+        document.getElementById("itrapesium1").value = "";
+        document.getElementById("itrapesium2").value = "";
+        document.getElementById("itrapesium3").value = "";
+        document.getElementById("itrapesium4").value = "";
+        document.getElementById("itrapesium5").value = "";
+        document.getElementById("otrapesium1").value = "";
+        document.getElementById("otrapesium2").value = "";
+      }
+
+      function hitunglingkaran (){
+        var r = document.getElementById("ilingkaran1").value;
+        if (r==0) {
+          alert("Data kosong");
+          exit;
+        }else{
+          document.getElementById("olingkaran1").value = (22/7)*r*r;
+          document.getElementById("olingkaran2").value = (22/7)*(2*r);
+        }
+
+      }
+      function hapus8(){
+        document.getElementById("ilingkaran1").value = "";
+        document.getElementById("olingkaran1").value = "";
+        document.getElementById("olingkaran2").value = "";
+      }
+    </script>
+</body>
+</html>

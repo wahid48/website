@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style1.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+
+
+    <style>
+        body{
+            background: url(../../css/bg.jpg);
+            background-attachment: fixed;
+        }
+        
+        .materi1{
+            display: flex;
+            justify-content: center;
+            padding: 2%;
+        }
+
+        .soal{
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 3%;
+            }
+        .soal1{
+            padding: 15px;
+        }
+
+        .materi2{
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            padding: 2%;
+            margin: 0 5% 0 5%;
+            align-items: center;
+        }
+
+        .soal2{
+            text-align: center;
+            padding-bottom: 3%;
+        }
+
+        .hr{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            position: relative;
+            left: 2%;
+        }
+
+        .soal2 input{
+            width: 50px;
+            height: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+<nav>
+
+    <div class="logo">
+        <h4>KELOMPOK 5</h4>
+    </div>
+
+    <ul>
+        <li><a href="../index1.html">Home</a></li>
+        <li><a href="../materi.html">Materi</a></li>
+        <li><a href="../Kalkulator.html">Kalkulator</a></li>
+        
+    </ul>
+
+
+    <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<h1 style="text-align: center;padding-top: 3%;">BILANGAN TIGA ANGKA</h1>
+
+<div class="materi1">
+    <img src="../../css/31.PNG" alt="">
+</div>
+
+<h2 style="text-align: center;">CONTOH SOAL</h2>
+
+<div class="soal">
+    <div class="soal1">
+        <img src="../../css/32.PNG" width="700px">
+        <br> <br> Urutan bilangannya adalah <input type="text" id='bil1' style="width: 40px; height:25px; text-align: center;">
+        <button class="submit" onclick="cek1()" style="width: 100px; height: 30px;">Jawab</button>
+        <h4 id='jwb1'></h4>
+    </div>
+
+    <div class="soal1">
+        <img src="../../css/33.PNG" width="700px">
+        <br> <br> Urutan bilangannya adalah <input type="text" id='bil2' style="width: 40px; height:25px; text-align: center;">
+        <button class="submit" onclick="cek2()" style="width: 100px; height: 30px;">Jawab</button>
+        <h4 id='jwb2'></h4>
+    </div>
+</div>
+
+<h1 style="text-align: center;">MENJUMLAHKAN TIGA ANGKA</h1> 
+
+<div class="materi2">
+    <img src="../../css/34.PNG">
+    <img src="../../css/35.PNG">
+    <img src="../../css/36.PNG" alt="">
+    <img src="../../css/37.PNG" alt="">
+</div>
+
+<div class="soal2">
+    <h4>Kalkulator</h4> <br>
+    <h4>1. 247 = <input type="text" id="r1"> + <input type="text" id="p1"> + <input type="text" id="s1"> <br><br>
+    &emsp; 351 = <input type="text" id="r2"> + <input type="text" id="p2"> + <input type="text" id="s2"> <br> <br>
+    <div class="hr">
+    <hr style="border: 1px solid black; width: 15%; height: 0;"> &emsp; <h2>+</h2>
+</div>
+<h4> <button class="submit" onclick="kal1()" style="width: 100px; height: 30px;">Hitung</button>
+    </h4>
+
+    <h4 id="jawaban"></h4>
+</div>  
+
+
+
+
+<script>
+    function cek1(){
+        var a = parseInt(document.getElementById('bil1').value);
+        if(a == '425'){
+            document.getElementById('jwb1').innerHTML = 'Benar';
+            document.getElementById('jwb1').style = 'color:green;'
+        } else {
+            document.getElementById('jwb1').innerHTML = 'Salah';
+            document.getElementById('jwb1').style = 'color:red;'
+        }
+    }
+
+    function cek2(){
+        var a = parseInt(document.getElementById('bil2').value);
+        if(a == '717'){
+            document.getElementById('jwb2').innerHTML = 'Benar';
+            document.getElementById('jwb2').style = 'color:green;'
+        } else {
+            document.getElementById('jwb2').innerHTML = 'Salah';
+            document.getElementById('jwb2').style = 'color:red;'
+        }
+    
+    function kal1(){
+        var a = parseInt(document.getElementsByid('r1').value);
+        var b = parseInt(document.getElementsByid('p1').value);
+        var c = parseInt(document.getElementsByid('s1').value);
+        var d = parseInt(document.getElementsByid('r2').value);
+        var e = parseInt(document.getElementsByid('p2').value);
+        var f = parseInt(document.getElementsByid('s2').value);
+
+        const hitung = [
+            a == '200', b=='40', c=='7', d=='300', e=='50', f=='1'
+        ]
+
+        if(hitung.indexOf(false)===-1)
+        {
+            document.getElementById('jawaban').innerHTML = 'benar'
+        }
+    }
+    }
+</script>
+
+
+</body>
+</html>

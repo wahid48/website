@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../css/materi.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        .wrap{
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+            .baru1{
+            border: 1px solid black;
+            padding: 5%;
+            background-color: #E2E2E2;
+            /* margin: 0px 15% 0px 15%; */
+            display: flex;
+            justify-content:space-around;
+        }
+
+        .luasvolume{
+            /* border: 1px solid black; */
+            padding: 5%;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .luasvolume a{text-decoration: none; color: black;} .luasvolume a:hover{color: #f15924;}
+
+        .luasbola{
+            /* border: 1px solid black; */
+            padding: 5%;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .luasbola a{text-decoration: none; color: black;} .luasbola a:hover{color: #f15924;}
+
+        .kubusbalok{
+            /* border: 1px solid black; */
+            padding: 5%;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .kubusbalok a{text-decoration: none; color: black;} .kubusbalok a:hover{color: #f15924;}
+
+        .meanmedian{
+            /* border: 1px solid black; */
+            padding: 5%;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .meanmedian a{text-decoration: none; color: black;} .meanmedian a:hover{color: #f15924;}
+        .limas{border: 1px solid black;} .bola{border: 1px solid black;} .kubal{border: 1px solid black; padding-bottom: 5%;} .mean{border: 1px solid black; padding-bottom: 5%;}
+        .imgrumus{padding-top: 5%;display:flex;justify-content: space-evenly;}
+        /* .limas div{border: 1px solid black;} */
+        .call,.calv{display: flex; align-items: center; text-align: center; flex-direction: column ; padding: 15px;}
+        .kalkulator{display: flex; flex-direction: row;}
+        .limas input{text-align: center; padding:8px; font-size: medium;}
+        .limas label{padding: 3px;}
+        .rumusbola{width: 350px;}
+        .bola input{text-align: center; padding:8px; font-size: medium;}
+        .inmean{display: flex; justify-content: space-between;}
+        .inmean input{width: 30px; padding: 5px; margin: 5px;}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+
+        <div class="logo">
+            <h4>KELOMPOK 5</h4>
+        </div>
+
+        <ul>
+            <li><a href="../index1.html">Home</a></li>
+            <li><a href="../materi.html">Materi</a></li>
+            <li><a href="../Kalkulator.html">Kalkulator</a></li>
+        </ul>
+
+
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+<div class="wrap">
+    <div class="baru1">
+
+        <div class="luasvolume">
+            <a href="#limas"><img src="../../css/limas.jpg" style="width: 200px; height: 200px;">
+            <h3>Cara Menghitung Luas dan Volume Limas</h3></a>
+        </div>
+
+        <div class="luasbola">
+            <a href="#bola"><img src="../../css/bola.jpg" style="width: 200px; height: 200px;">
+                <h3>Cara Menghitung Volume dan Luas Permukaan Bola</h3></a>
+        </div>
+
+        <div class="kubusbalok">
+            <a href="#kubal"><img src="../../css/kubusbalok.png" style="width: 200px; height: 200px;">
+                <h3>Rumus - Rumus Kubus dan Balok</h3></a>
+        </div>
+
+        <div class="meanmedian">
+            <a href="#mean"><img src="../../css/meanmedian.jpg" style="width: 200px; height: 200px;">
+                <h3>Cara Menghitung Mean dan Median</h3></a>
+        </div>
+    </div>
+
+    <div class="limas" id="limas">
+        <h3 style="padding-top: 5%; padding-bottom: 2%; text-align: center;">Apakah adik - adik tau apa itu Limas?</h3>
+        <p style="text-align: justify; margin-left: 5%; margin-right: 5%;">Halo adik-adik, kamu tahu nggak ada sebuah negara di benua Afrika yang mendapat julukan sebagai “Negeri Piramida”? dan Apakah kamu tahu bahwa Piramida tersebut ternyata berbentuk Limas?
+            Coba tebak negara apakah tersebut?
+            Yups, betul sekali, Mesir. Mesir merupakan negara dengan bangunan piramida kuno terbanyak di dunia. Di Mesir, piraminda digunakan sebagai makam-makam raja Mesir Kuno lho, adik-adik.
+            Menariknya, para insinyur yang merencakan membangun piramida, melakukan penghitungan jarak piramida dengan matahari.
+            Kenapa? Matahari, dalam kehidupan masyarakat Mesir Kuno menjadi salah satu hal yang penting. Oleh karena itu, para ilmuwan modern pun mengakui kehebatan insinyur yang merancang piramida pada saat itu.
+            <br><br> Berikut cara menghitung volume dan luas limas, ayo kita lihat!
+        </p>
+        <div class="imgrumus">
+
+        <div class="imglim">
+        <img src="../../css/rumuslimas.png" alt="">
+    </div>
+
+    <div class="rumuslimas">
+        <p style="font-weight: bold;">
+            Untuk mengetahui luas permukaan dan volume limas, kamu bisa gunakan rumus berikut ini. <br><br>
+
+            Luas permukaan limas: <br>
+
+            Luas alas + jumlah luas sisi tegak (selubung) <br>
+            <br>
+            Volume limas: <br>
+
+            ⅓ x luas alas x tinggi <br><br>
+
+        </p>
+
+    <div class="kalkulator">
+    <div class="call">
+        <h4>Perhitungan Luas</h4> <br>
+        <label>Masukkan luas alas: </label>
+        <input type="text" id="luasA">
+        <label for="">Masukkan jumlah sisi tegak:</label>
+        <input type="text" id="luasS"><br>
+        <h1 id="hasil"></h1>
+
+        <div class="btn">
+        <button onclick="luas()" id="btnhasil" style="width: 80px; height: 30px;">Hasil</button>
+        <button onclick="reset1()" id="btnreset" style="width: 80px; height: 30px;">Hapus</button>
+    </div>
+    </div>
+
+    <div class="calv">
+        <h4>Perhitungan Volume</h4> <br>
+        <label>Masukkan luas alas: </label>
+        <input type="text" id="luasa">
+        <label for="">Masukkan tinggi:</label>
+        <input type="text" id="luasT"> <br>
+        <h1 id="hasilv"></h1>
+        <div class="btn"><button onclick="volume()" style="width: 80px; height: 30px;">Hasil</button>
+        <button onclick="reset2()" style="width: 80px; height: 30px;">Hapus</button></div>
+    </div>
+</div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="bola" id="bola">
+
+        <h3 style="padding-top: 5%; padding-bottom: 2%; text-align: center;">Adik - Adik pasti sudah tau bukan apa itu bola?</h3>
+        <p style="text-align: justify; margin-left: 5%; margin-right: 5%;">
+            Adik - adik pasti pernah melihat, menyentuh, bahkan bermain bola, ada bola basket, bola futsal, sepak bola,
+            namun tahu kah adik-adik bola itu merupakan bangun ruang? <br>
+            Bola adalah bangun ruang sisi lengkung yang dibatasi oleh satu bidang lengkung.
+            Bola didapatkan dari bangun setengah lingkaran yang diputar satu putaran penuh atau 360 derajat pada garis tengahnya.
+            <br><br> Berikut cara menghitung volume dan luas limas, ayo kita lihat!
+        </p>
+
+
+        <div class="imgrumus">
+
+            <div class="imgbola">
+        <img src="../../css/rumusbola.jpg" alt="">
+        </div>
+
+        <div class="rumusbola">
+        <p style="font-weight: bold;">
+            Untuk mengetahui luas dan volume bola, kamu bisa gunakan rumus berikut ini. <br><br>
+
+                Rumus Volume Bola <br>
+                V = 4/3 × π × r3 <br><br>
+
+                Keterangan:<br>
+                v = volume bola<br>
+                r = jari – jari bola<br>
+                π = 22/7 atau 3,14<br><br>
+                Rumus Luas Bola<br>
+                L = 4 × π × r2<br><br>
+
+                Keterangan:<br>
+                L = luas permukaan bola<br>
+                r = jari – jari bola<br>
+                π = 22/7 atau 3,14<br>
+            </p>
+            </div>
+        <div class="kalkulator">
+            <div class="call">
+                <h4>Perhitungan Luas</h4> <br>
+                <label>Masukkan jari - jari: </label>
+                <input type="text" id="r2"> <br>
+                <h1 id="luasbola"></h1><br>
+
+                <div class="btn">
+                <button onclick="luasbola()" style="width: 80px; height: 30px;">Hasil</button>
+                <button onclick="resetbola()" style="width: 80px; height: 30px;">Hapus</button>
+            </div>
+
+            </div>
+
+            <div class="calv">
+                <h4>Perhitungan Volume</h4> <br>
+                <label>Masukkan jari - jari: </label>
+                <input type="text" id="r3"> <br>
+                <h1 id="volbola"></h1><br>
+
+                <div class="btn">
+                <button onclick="volumebola()" style="width: 80px; height: 30px;">Hasil</button>
+                <button onclick="resetbola2()" style="width: 80px; height: 30px;">Hapus</button></div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="kubal" id="kubal">
+        <h3 style="padding-top: 5%; padding-bottom: 2%; text-align: center;">Kubus dan Balok</h3>
+        <p style="text-align: justify; margin-left: 5%; margin-right: 5%;">
+            Pengertian kubus adalah bangun ruang yang semua sisinya berbentuk persegi dan semua rusuknya sama panjang.
+            Sedangkan pengertian balok adalah bangun ruang yang mempunyai tiga pasang sisi yang ukurannya sama dan saling berhadapan serta memiliki bentuk persegi panjang.
+            <br><br> Berikut cara menghitung Kubus dan Balok, ayo kita lihat!
+        </p>
+
+
+        <div class="imgrumus">
+        <img src="../../css/kubusbalok.png" style="width:450px; height:400px">
+        <p style="font-weight:bold;">
+
+            Untuk mengetahui rumus kubus, kamu bisa gunakan rumus berikut ini. <br><br>
+
+                Volume kubus (V) = s x s x s <br>
+                Luas kubus (L)= 6 x (s x s) <br>
+                Keliling kubus	(K) = 12 x s <br><br>
+
+
+
+                Untuk mengetahui rumus Balok, kamu bisa gunakan rumus berikut ini. <br><br>
+
+                    Volume balok (V) = p × l × t <br>
+                    Luas balok (L)= 2 × (p.l + p.t +l.t) <br>
+                    Keliling balok	(K) = 4 x (p + l + t)<br>
+
+        <div class="kalkulator">
+            <div class="call">
+                <h4>Perhitungan Luas Kubus</h4> <br>
+                <label>Masukkan Sisi: </label> <br>
+                <input type="text" id="SK1"> <br>
+                <h4 id="luaskubus"></h4><br>
+                <div class="btn">
+                    <button onclick="luaskubus()" style="width: 80px; height: 30px;">Hasil</button>
+                    <button onclick="resetk1()" style="width: 80px; height: 30px;">Hapus</button>
+                </div> <br>
+
+                <h4>Perhitungan Volume Kubus</h4> <br>
+                <label>Masukkan jari - jari: </label> <br>
+                <input type="text" id="SK2"> <br>
+                <h4 id="volumek1"></h4><br>
+                <div class="btn">
+                    <button onclick="volumekubus()" style="width: 80px; height: 30px;">Hasil</button>
+                    <button onclick="resetk2()" style="width: 80px; height: 30px;">Hapus</button>
+                </div> <br>
+
+                <h4>Perhitungan Keliling Kubus</h4> <br>
+                <label>Masukkan jari - jari: </label> <br>
+                <input type="text" id="SK3"> <br>
+                <h4 id="kelkubus"></h4><br>
+
+                <div class="btn">
+                <button onclick="kelkubus()" style="width: 80px; height: 30px;">Hasil</button>
+                <button onclick="resetk3()" style="width: 80px; height: 30px;">Hapus</button>
+            </div>
+
+            </div>
+
+            <div class="calv">
+                <h4>Perhitungan Luas balok</h4> <br>
+                <label>Masukkan Panjang: </label>
+                <input type="text" id="pb1"> <br>
+                <label>Masukkan Lebar: </label>
+                <input type="text" id="lb1"> <br>
+                <label>Masukkan Tinggi: </label>
+                <input type="text" id="tb1"> <br>
+                <h4 id="luasbalok"></h4><br>
+                <div class="btn">
+                    <button onclick="luasbalok()" style="width: 80px; height: 30px;">Hasil</button>
+                    <button onclick="resetb1()" style="width: 80px; height: 30px;">Hapus</button>
+                </div> <br>
+
+                <h4>Perhitungan Volume balok</h4> <br>
+                <label>Masukkan Panjang: </label>
+                <input type="text" id="pb2"> <br>
+                <label>Masukkan Lebar: </label>
+                <input type="text" id="lb2"> <br>
+                <label>Masukkan Tinggi: </label>
+                <input type="text" id="tb2"> <br>
+                <h4 id="volumebalok"></h4><br>
+                <div class="btn">
+                    <button onclick="volumebalok()" style="width: 80px; height: 30px;">Hasil</button>
+                    <button onclick="resetb2()" style="width: 80px; height: 30px;">Hapus</button>
+                </div> <br>
+
+                <h4>Perhitungan Keliling balok</h4> <br>
+                <label>Masukkan Panjang: </label>
+                <input type="text" id="pb3"> <br>
+                <label>Masukkan Lebar: </label>
+                <input type="text" id="lb3"> <br>
+                <label>Masukkan Tinggi: </label>
+                <input type="text" id="tb3"> <br>
+                <h4 id="kelbalok"></h4><br>
+
+                <div class="btn">
+                <button onclick="kelbalok()" style="width: 80px; height: 30px;">Hasil</button>
+                <button onclick="resetb3()" style="width: 80px; height: 30px;">Hapus</button>
+            </div>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <div class="mean" id="mean">
+        <h3 style="padding-top: 5%; padding-bottom: 2%; text-align: center;">Mean dan Median</h3>
+        <p style="text-align: justify; margin-left: 5%; margin-right: 5%;">
+           <b> Mean </b>adalah rata-rata matematika sederhana dari sekumpulan dua atau lebih bilangan. Mean menunjukkan distribusi nilai yang sama untuk kumpulan data tertentu.
+            Untuk menghitung mean, kamu perlu menambahkan nilai total yang diberikan dalam data dan kemudian membagi jumlahnya dengan jumlah nilai total. <br>
+            <b>Median </b>adalah datum yang letaknya di tengah dari suatu data, tapi dengan syarat datanya sudah diurutkan dari yang terkecil sampai terbesar.
+            Nah, pada bahasan median ini kamu bisa perhatikan jumlah data yang ada, misal datanya itu ganjil atau genap.
+            <br><br> Berikut cara menghitung Kubus dan Balok, ayo kita lihat!
+        </p>
+
+        <div class="imgrumus">
+        <div class="imagemean">
+        <img src="../../css/meanmedian.jpg" id='median' style="width:450px; height:400px">
+    </div>
+
+        <div class="pmean">
+        <p style="font-weight:bold;">
+            Untuk mengetahui Mean dari suatu bilangan, kamu bisa mencarinya dengan cara berikut ini. <br><br>
+            Contoh: <br><br>
+            Ada bilangan : 2, 3, 4 <br>
+            Kita hitung Mean nya dengan cara menambahkan semua angka, lalu dibagi dari jumlah angka. <br>
+            Disini kita bisa lihat jumlah angka nya ada 3 buah angka. <br>
+            Maka: <br>
+            (2+3+4)/3 <br>
+            = 9 / 3 <br>
+            = 3 <br>
+            Maka nilai Meannya adalah 3
+            <br><br>
+
+
+            Untuk mengetahui Median dari suatu bilangan, kamu bisa mencarinya dengan cara berikut ini. <br><br>
+            Contoh: <br><br>
+            Ada bilangan: 3,2,4,5,1 <br>
+            Untuk mencari Median (Nilai Tengah) maka kita harus mengurutkan angka terlebih dahulu. <br>
+            <br>
+            Kita urutkan bilangannya: <br>
+            1 , 2 , 3 , 4 , 5 <br>
+            Maka dapat kita ketahui nilai tengah nya yaitu angka 3.
+
+        </p>
+    </div>
+
+    <div class="kalkulator">
+        <div class="call">
+            <h4>Perhitungan Mean</h4> <br>
+            <label>Masukkan Nilai: </label>
+            <div class="inmean">
+            <input type="text" id="n1">
+            <input type="text" id="n2">
+            <input type="text" id="n3">
+            <input type="text" id="n4">
+            <input type="text" id="n5"><br>
+        </div>
+        <h4 id="hasilmean"></h4><br>
+
+            <div class="btn">
+            <button onclick="meann()" style="width: 80px; height: 30px;">Hasil</button>
+            <button onclick="resetmeann()" style="width: 80px; height: 30px;">Hapus</button>
+        </div>
+
+    </div>
+    </div>
+
+</div>
+
+</div>
+
+<a href="#"><button id="upbtn"><img src="../../css/up.png"></button></a>
+
+<script src="../../script/script.js"></script>
+</body>
+</html>

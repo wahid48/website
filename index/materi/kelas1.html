@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style1.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+
+
+    <style>
+       body{
+           background-image: url(../../css/bg.jpg);
+           background-attachment: fixed;
+       }
+
+    .materi1{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5%;
+    }
+
+    .soal{
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    .soal1, .soal2, .soal3 {
+        background-color: white;
+        width: 400px;
+        height: 200px;
+        border-radius: 15px;
+        border: 1px solid black;
+    }
+    
+    .angka{display: flex; justify-content: center;}
+    .soal img{width: 100px; height: 100px;}
+    .soal1 p {text-align: justify; float: right; padding: 10px 10px 0px 0px;}
+    .soal3 p {text-align: justify; float: right; padding: 10px 10px 0px 0px;}
+    .soal1 img {padding: 20px;}
+    .soal2 img {padding: 20px;}
+    .soal3 img {padding: 20px;}
+    .soal2 p {text-align: justify; float: right; padding: 10px 10px 0px 0px;}
+    </style>
+</head>
+<body>
+    
+<nav>
+
+    <div class="logo">
+        <h4>KELOMPOK 5</h4>
+    </div>
+
+    <ul>
+        <li><a href="../index1.html">Home</a></li>
+        <li><a href="../materi.html">Materi</a></li>
+        <li><a href="../Kalkulator.html">Kalkulator</a></li>
+        
+    </ul>
+
+
+    <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+<h1 style="padding-top: 15px; text-align: center;">MEMBILANGAN DAN MENYEBUTKAN BENDA</h1>
+
+<div class="materi1">
+    <img src="../../css/1.PNG" alt="">
+    <img src="../../css/2.PNG" alt="">
+</div>
+
+<div class="angka">
+    <img src="../../css/angka.PNG" alt="">
+</div>
+
+<div class="soal">
+    <div class="soal1">
+    <img src="../../css/es.PNG" alt=""> 
+    <p>siapa yang suka es krim, <br> didalam mangkuk ada <br>
+        <input type="text" id="three" style="width: 30px; text-align: center;">
+        es krim
+        <br><br>
+        <button class="submit" onclick="tiga()" style="width: 50px;">Jawab</button>
+        <h3 id="3"></h3>
+    </p>  
+</div>
+
+<div class="soal2">
+    <img src="../../css/kue.PNG" alt=""> 
+    <p>siapa yang suka kue, <br> diatas piring ada <br>
+        <input type="text" id="four" style="width: 30px; text-align: center;">
+        kue
+        <br><br>
+        <button class="submit" onclick="empat()" style="width: 50px;">Jawab</button>
+        <h3 id="4"></h3>
+    </p>  
+</div>
+
+<div class="soal3">
+    <img src="../../css/permen.PNG" alt=""> 
+    <p>siapa yang suka Permen, <br> didalam plastik ada <br>
+        <input type="text" id="ten" style="width: 30px; text-align: center;">
+        permen
+        <br><br>
+        <button class="submit" onclick="sepuluh()" style="width: 50px;">Jawab</button>
+        <h3 id="10"></h3>
+    </p>  
+</div>
+</div>
+
+
+
+<script>
+    function tiga(){
+        var jwb = parseInt(document.getElementById('three').value);
+        if(jwb == "3"){
+        document.getElementById(3).innerHTML = 'benar';
+        document.getElementById(3).style = 'text-align:center; color:green;';
+    }else{
+        document.getElementById(3).innerHTML = 'salah';
+        document.getElementById(3).style = 'text-align:center; color:red;';
+    }
+}
+
+    function empat(){
+        var jwb = parseInt(document.getElementById('four').value);
+        if(jwb == "4"){
+        document.getElementById(4).innerHTML = 'benar';
+        document.getElementById(4).style = 'text-align:center; color:green;'
+    }else{
+        document.getElementById(4).innerHTML = 'salah';
+        document.getElementById(4).style = 'text-align:center; color:red;';
+    }
+}
+    function sepuluh(){
+        var jwb = parseInt(document.getElementById('ten').value);
+        if(jwb == "10"){
+        document.getElementById(10).innerHTML = 'benar';
+        document.getElementById(10).style = 'text-align:center; color:green;'
+    }else{
+        document.getElementById(10).innerHTML = 'salah';
+        document.getElementById(10).style = 'text-align:center; color:red;';
+    }
+}
+</script>
+</body>
+</html>

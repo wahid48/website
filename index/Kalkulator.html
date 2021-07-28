@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perhitungan Aritmatika Dasar</title>
+    <link rel="stylesheet" href="../css/kalkulator.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+  form{padding-left: 15%;}
+</style>
+</head>
+<body>
+  <nav>
+
+      <div class="logo">
+          <h4>KELOMPOK 5</h4>
+      </div>
+
+      <ul>
+          <li><a href="index1.html">Home</a></li>
+          <li><a href="materi.html">Materi</a></li>
+          <li><a href="Kalkulator.html">Kalkulator</a></li>
+          
+      </ul>
+
+  </nav>
+    <br><br>
+    <h1 style="font-family: 'Montserrat'; font-weight: bold;">Perhitungan Dasar Aritmatika</h1>
+    <br><br>
+
+        <form name="formpenjumlahan" id="formhitung" class="perhitungandasar">
+          <h3>Penjumlahan</h3>
+
+            <br>
+            <input type="text" id="jumlah1">
+            <span>+</span>
+            <input type="text" id="jumlah2">
+            <span>=</span>
+            <input type="text" name="hasiljumlah" class="coba" readonly>
+            <br><br>
+            <button type="button" onclick="tambah()">HITUNG</button>
+            <button type="button" onclick="clear1()">DELETE</button>
+
+            <br><br><br>
+
+          <h3>Pengurangan</h3>
+            <br>
+            <input type="text" id="kurang1">
+            <span>-</span>
+            <input type="text" id="kurang2">
+            <span>  = </span>
+            <input type="text" name="hasilkurang" class="coba" readonly>
+            <br><br>
+            <button type="button" onclick="kurang()">HITUNG</button>
+            <button type="button" onclick="clear2()">DELETE</button>
+
+            <br><br><br>
+
+          <h3>Pembagian</h3>
+            <br>
+            <input type="text" name="bagi1">
+            <span>/</span>
+            <input type="text" name="bagi2">
+            <span>=</span>
+            <input type="text" name="hasilbagi" class="coba" readonly>
+            <br><br>
+            <button type="button" onclick="bagi()">HITUNG</button>
+            <button type="button" onclick="clear3()">DELETE</button>
+
+            <br><br><br>
+
+            <h3>Perkalian</h3>
+              <br>
+              <input type="text" id="kali1">
+              <span>x</span>
+              <input type="text" id="kali2">
+              <span>=</span>
+              <input type="text" name="hasilkali" class="coba" readonly>
+              <br><br>
+              <button type="button" onclick="kali()">HITUNG</button>
+              <button type="button" onclick="clear4()">DELETE</button>
+
+              <br><br><br>
+
+            <h3>Pangkat</h3>
+              <br>
+              <input type="text" class = "pangkat1" name="pangkat1">
+              <span>^</span>
+              <input type="text" class = "pangkat2" name="pangkat2">
+              <span>=</span>
+              <input type="text" name="hasilpangkat" class="coba" readonly>
+              <br><br>
+              <button type="button" onclick="pangkat()">HITUNG</button>
+              <button type="button" onclick="clear5()">DELETE</button>
+
+              <br><br><br>
+
+              <h3>Akar</h3>
+                <br>
+                <select id="jmlakar" name="jumlahakar">
+                  <option value="dua">2</option>
+                  <option value="tiga">3</option>
+                </select>
+                <span>√</span>
+                <input type="text" name="akar1" id="angkaakar">
+                <span font-size: 30px >=</span>
+                <input type="text" name="hasilakar" class="coba" id="angkahasilakar" maxlength="5" readonly>
+                <br><br>
+                <button type="button" class= "coba2" onclick="akar()">HITUNG</button>
+                <button type="button" onclick="clear6()">DELETE</button>
+
+                <br><br><br>
+
+        </form>
+
+    <script>
+      function cek(){
+        if (x==1) {
+          if (formpenjumlahan.jumlah1.value=="" || formpenjumlahan.jumlah2.value=="" ) {
+            alert("Data yang akan di jumlahkan kosong");
+            exit
+          }
+        }else if (x==2) {
+          if (formpenjumlahan.kurang1.value=="" || formpenjumlahan.kurang2.value=="" ) {
+            alert("Data yang akan di kurangkan kosong");
+            exit
+          }
+        }else if (x==3) {
+          if (formpenjumlahan.bagi1.value=="" || formpenjumlahan.bagi2.value=="" ) {
+            alert("Data yang akan di bagi kosong");
+            exit
+          }
+        }else if (x==4) {
+          if (formpenjumlahan.kali1.value=="" || formpenjumlahan.kali2.value=="" ) {
+            alert("Data yang akan di kali kosong");
+            exit
+          }
+        }else if (x==5) {
+          if (formpenjumlahan.pangkat1.value=="" || formpenjumlahan.pangkat2.value=="" ) {
+            alert("Data yang akan di pangkat kosong");
+            exit
+          }
+        }
+
+      }
+      function tambah(){
+        x = 1;
+        cek();
+        var a = document.getElementById("jumlah1").value;
+        var b = document.getElementById("jumlah2").value;
+
+        var n_tambah = a.indexOf(",");
+        var m_tambah = b.indexOf(",");
+
+        if (n_tambah>0 || m_tambah>0) {
+          alert("silahkan ganti karakter ','(koma) menjadi '.'(titik)");
+          exit;
+        }else {
+          formpenjumlahan.hasiljumlah.value = parseFloat(a) + parseFloat(b);
+        }
+
+      }
+
+      function kurang(){
+        x = 2;
+        cek();
+        var a = document.getElementById("kurang1").value;
+        var b = document.getElementById("kurang2").value;
+
+        var n_kurang = a.indexOf(",");
+        var m_kurang = b.indexOf(",");
+
+        if (n_kurang>0 || m_kurang>0) {
+          alert("silahkan ganti karakter ','(koma) menjadi '.'(titik)");
+          exit;
+        }else {
+          var n_kurang1 = a.indexOf(".");
+          var m_kurang1 = b.indexOf(".");
+          if (n_kurang1>0 || m_kurang1>0) {
+            var a1 = parseFloat(a);
+            var b1 = parseFloat(b);
+            formpenjumlahan.hasilkurang.value = a1 - b1;
+          }else {
+            formpenjumlahan.hasilkurang.value = a - b;
+          }
+
+        }
+      }
+
+      function bagi(){
+        x = 3;
+        cek();
+
+        a = parseFloat(formpenjumlahan.bagi1.value);
+        b = parseFloat(formpenjumlahan.bagi2.value);
+        formpenjumlahan.hasilbagi.value = a / b;
+      }
+
+      function kali(){
+        x = 4;
+        cek();
+        var a = document.getElementById("kali1").value;
+        var b = document.getElementById("kali2").value;
+
+        var n_kali = a.indexOf(",");
+        var m_kali = b.indexOf(",");
+
+        if (n_kali>0 || m_kali>0) {
+          alert("silahkan ganti karakter ','(koma) menjadi '.'(titik)");
+          exit;
+        }else {
+          var n_kali1 = a.indexOf(".");
+          var m_kali1 = b.indexOf(".");
+          if (n_kali1>0 || m_kali1>0) {
+            var a1 = parseFloat(a);
+            var b1 = parseFloat(b);
+            formpenjumlahan.hasilkali.value = a1 * b1;
+          }else {
+            formpenjumlahan.hasilkali.value = a * b;
+          }
+
+        }
+      }
+
+      function pangkat(){
+        x = 5;
+        cek();
+        a = parseInt(formpenjumlahan.pangkat1.value);
+        b = parseInt(formpenjumlahan.pangkat2.value);
+        if (b==0) {
+          formpenjumlahan.hasilpangkat.value = 1;
+        }else if (b<0) {
+          b = b*-1;
+          var c = a;
+          for (var i = 1; i < b; i++) {
+            c = c*a
+          }
+          formpenjumlahan.hasilpangkat.value = 1/c;
+        }else{
+          var c = a;
+          for (var i = 1; i < b; i++) {
+            c = c*a
+          }
+          formpenjumlahan.hasilpangkat.value = c;
+        }
+
+      }
+
+      function akar(){
+        var a_akar = document.getElementById("angkaakar").value;
+        if (document.getElementById("jmlakar").value == "dua") {
+
+          var n = a_akar.indexOf(",");
+          if (n>0) {
+            alert("silahkan ganti karakter ','(koma) menjadi '.'(titik)");
+            exit;
+
+          }else{
+
+            var n_akar = Math.sqrt(a_akar);
+            document.getElementById("angkahasilakar").value = n_akar.toFixed(4);
+          }
+
+        } else if (document.getElementById("jmlakar").value == "tiga") {
+
+          var q = a_akar.indexOf(",");
+          if (q>0) {
+            alert("silahkan ganti karakter ',' menjadi '.'");
+            exit;
+          }else {
+            document.getElementById("angkahasilakar").value = Math.cbrt(a_akar).toFixed(4);
+          }
+        }
+      }
+
+      function clear1(){
+        formpenjumlahan.jumlah1.value = "";
+        formpenjumlahan.jumlah2.value = "";
+        formpenjumlahan.hasiljumlah.value = "";
+
+      }
+
+      function clear2(){
+        formpenjumlahan.kurang1.value = "";
+        formpenjumlahan.kurang2.value = "";
+        formpenjumlahan.hasilkurang.value = "";
+      }
+
+      function clear3(){
+        formpenjumlahan.bagi1.value = "";
+        formpenjumlahan.bagi2.value = "";
+        formpenjumlahan.hasilbagi.value = "";
+      }
+
+      function clear4(){
+        formpenjumlahan.kali1.value = "";
+        formpenjumlahan.kali2.value = "";
+        formpenjumlahan.hasilkali.value = "";
+      }
+
+      function clear5(){
+        formpenjumlahan.pangkat1.value = "";
+        formpenjumlahan.pangkat2.value = "";
+        formpenjumlahan.hasilpangkat.value = "";
+      }
+
+      function clear6(){
+        formpenjumlahan.akar1.value = "";
+        formpenjumlahan.hasilakar.value = "";
+      }
+    </script>
+
+</body>
